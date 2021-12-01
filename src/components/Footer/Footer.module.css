@@ -1,0 +1,52 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.container * {
+  display: inline;
+}
+
+.logo {
+  height: 100%;
+  color: rgb(30, 30, 85);
+  font-size: 3rem;
+  flex-basis: 15%;
+}
+
+.flex {
+  flex-basis: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  gap: 1rem;
+  color: rgb(30, 30, 85);
+  font-weight: bold;
+}
+
+.list > li:not(:last-child) {
+  border-right: 2px solid rgb(30, 30, 85);
+}
+
+.list > li {
+  padding-right: 1rem;
+}
+
+.lang {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: rgb(30, 30, 85);
+}
+
+.line {
+  border-top: 1px solid gray;
+  margin-top: 2rem;
+  width: 95%;
+  margin: 2rem auto;
+}
