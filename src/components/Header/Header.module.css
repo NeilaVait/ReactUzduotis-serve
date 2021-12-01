@@ -30,4 +30,22 @@
 .menu > li {
   cursor: pointer;
   font-size: 1.2rem;
+  position: relative;
+}
+
+.menu > li:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 3px;
+  bottom: -120%;
+  left: 0;
+  background: azure;
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.menu > li:hover::after {
+  transform: scaleX(1);
 }
