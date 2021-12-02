@@ -3,6 +3,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Aside from './components/Aside/Aside';
 import FunctionsMenu from './components/FunctionsMenu/FunctionsMenu';
+import ClientSearch from './components/ClientSearch/ClientSearch';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <Aside />
         <main>
           <FunctionsMenu />
-          {/* <ClientSearch /> */}
+          <ClientSearch />
+          <Footer />
         </main>
       </div>
       <Footer />
