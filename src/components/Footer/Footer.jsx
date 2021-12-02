@@ -3,7 +3,7 @@ import styles from './Footer.module.css';
 function Footer() {
   return (
     <div className={styles.line}>
-      <div className={styles.container}>
+      <footer className={styles.footer}>
         <p className={styles.logo}>
           <strong>serve </strong>pro
         </p>
@@ -21,7 +21,7 @@ function Footer() {
           </ul>
           <button className={styles.lang}>Lietuvių</button>
         </div>
-      </div>
+      </footer>
     </div>
   );
 }
