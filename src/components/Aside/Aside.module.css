@@ -1,0 +1,8 @@
+.line {
+  height: 0px;
+  border-bottom: 1px solid grey;
+}
+
+.aside {
+  flex-basis: 15%;
+}
