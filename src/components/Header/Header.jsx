@@ -2,7 +2,7 @@ import styles from './Header.module.css';
 
 function Header() {
   return (
-    <header className={styles.container}>
+    <header className={styles.header}>
       <div className={styles.flex}>
         <p className={styles.logo}>
           <strong>serve </strong>pro
