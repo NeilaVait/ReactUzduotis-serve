@@ -3,4 +3,5 @@
   background-color: rgb(240, 240, 240);
   text-align: right;
   padding: 0 1rem;
+  flex-basis: 100%;
 }

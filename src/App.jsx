@@ -1,23 +1,17 @@
 import './App.css';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import Aside from './components/Aside/Aside';
-import FunctionsMenu from './components/FunctionsMenu/FunctionsMenu';
-import ClientSearch from './components/ClientSearch/ClientSearch';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import FunctionsPage from './pages/FunctionsPage';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <div className="main-flex">
-        <Aside />
-        <main>
-          <FunctionsMenu />
-          <ClientSearch />
-          <Footer />
-        </main>
-      </div>
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path="/funkcijos" element={<FunctionsPage />} />
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

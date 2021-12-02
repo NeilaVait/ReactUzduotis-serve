@@ -7,10 +7,10 @@
   margin: 0 2%;
 }
 
-.main-flex {
-  display: flex;
-}
-
 main {
   flex-basis: 100%;
+}
+
+.asideFlex {
+  display: flex;
 }
