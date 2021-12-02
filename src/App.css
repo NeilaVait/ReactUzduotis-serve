@@ -2,3 +2,15 @@
   box-sizing: border-box;
   margin: 0;
 }
+
+.container {
+  margin: 0 2%;
+}
+
+.main-flex {
+  display: flex;
+}
+
+main {
+  flex-basis: 100%;
+}
