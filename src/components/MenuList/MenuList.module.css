@@ -1,0 +1,20 @@
+.list {
+  list-style-type: none;
+  padding: 0;
+  padding-bottom: 1rem;
+  line-height: 2rem;
+}
+
+.list > li {
+  padding-left: 2rem;
+}
+
+.list > li:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.menu > h3 {
+  margin: 1rem 0 1rem 0;
+  padding-left: 2rem;
+}
