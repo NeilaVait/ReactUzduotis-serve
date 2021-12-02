@@ -1,0 +1,43 @@
+.searchTable {
+  background-color: lightgray;
+  padding: 1rem;
+  position: relative;
+}
+
+.searchBar {
+  border-radius: 15px;
+  border: none;
+  padding: 0.5rem;
+  width: 100%;
+  line-height: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.clean {
+  border-radius: 15px;
+  border: none;
+  width: 80px;
+  background-color: darkblue;
+  color: azure;
+  position: absolute;
+  top: 24px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.table {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.table > tr > th {
+  text-align: left;
+}
+
+.table > tr {
+  line-height: 1.5rem;
+}
+
+.table > tr > td {
+  font-size: 15px;
+}

@@ -1,3 +1,5 @@
+import styles from './SearchTable.module.css';
+
 function SearchTable() {
   const columns = [
     'Vardas',
@@ -34,19 +36,31 @@ function SearchTable() {
       phone1: '+370 000 00000',
       phone2: '+370 000 00000',
     },
+    {
+      name: 'Vardenis',
+      surname: 'Pavardenis',
+      city: 'Kaunas',
+      cardNo: '21 V0001',
+      id: '00000',
+      code: '00000',
+      birthYear: '1974',
+      phone1: '+370 000 00000',
+      phone2: '+370 000 00000',
+    },
   ];
 
   return (
-    <div>
-      <input type="search" placeholder="Kliento paieška" />
-      <table>
+    <div className={styles.searchTable}>
+      <button className={styles.clean}>Valyti</button>
+      <input type="search" placeholder="Kliento paieška" className={styles.searchBar} />
+      <table className={styles.table}>
         <tr>
           {columns.map((c) => (
             <th>{c}</th>
           ))}
         </tr>
         {clients.map((c) => (
-          <tr>
+          <tr className={styles.client}>
             <td>{c.name}</td>
             <td>{c.surname}</td>
             <td>{c.city}</td>
