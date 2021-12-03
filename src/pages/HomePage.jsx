@@ -1,7 +1,7 @@
 import Layout from './../components/Layout/Layout';
 
 function HomePage() {
-  return <Layout>Home</Layout>;
+  return <Layout></Layout>;
 }
 
 export default HomePage;

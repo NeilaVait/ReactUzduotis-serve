@@ -1,4 +1,5 @@
 import styles from './SearchTable.module.css';
+import { useState } from 'react';
 
 function SearchTable() {
   const columns = [
@@ -26,7 +27,7 @@ function SearchTable() {
       phone2: '+370 000 00000',
     },
     {
-      name: 'Vardenis',
+      name: 'Bardenis',
       surname: 'Pavardenis',
       city: 'Kaunas',
       cardNo: '21 V0001',
@@ -49,29 +50,48 @@ function SearchTable() {
     },
   ];
 
+  const [searchValue, setSearchValue] = useState('');
+
   return (
     <div className={styles.searchTable}>
       <button className={styles.clean}>Valyti</button>
-      <input type="search" placeholder="Kliento paieška" className={styles.searchBar} />
+      <input
+        value={searchValue}
+        onChange={(e) => {
+          setSearchValue(e.target.value);
+        }}
+        type="text"
+        placeholder="Kliento paieška"
+        className={styles.searchBar}
+      />
       <table className={styles.table}>
         <tr>
           {columns.map((c) => (
             <th>{c}</th>
           ))}
         </tr>
-        {clients.map((c) => (
-          <tr className={styles.client}>
-            <td>{c.name}</td>
-            <td>{c.surname}</td>
-            <td>{c.city}</td>
-            <td>{c.cardNo}</td>
-            <td>{c.id}</td>
-            <td>{c.code}</td>
-            <td>{c.birthYear}</td>
-            <td>{c.phone1}</td>
-            <td>{c.phone2}</td>
-          </tr>
-        ))}
+        {clients
+          .filter((val) => {
+            if (searchValue === '') {
+              return val;
+            }
+            if (val.name.toLowerCase().includes(searchValue.toLowerCase())) {
+              return val;
+            }
+          })
+          .map((c) => (
+            <tr className={styles.client}>
+              <td>{c.name}</td>
+              <td>{c.surname}</td>
+              <td>{c.city}</td>
+              <td>{c.cardNo}</td>
+              <td>{c.id}</td>
+              <td>{c.code}</td>
+              <td>{c.birthYear}</td>
+              <td>{c.phone1}</td>
+              <td>{c.phone2}</td>
+            </tr>
+          ))}
       </table>
     </div>
   );
