@@ -1,0 +1,69 @@
+.container {
+  padding: 1rem 0;
+}
+
+.container > h2 {
+  margin-bottom: 0.5rem;
+}
+
+.flex {
+  display: flex;
+  padding: 1rem;
+  background: lightgray;
+  gap: 2rem;
+}
+
+.info {
+  flex-basis: 85%;
+}
+
+.info > h4 {
+  margin-bottom: 0.5rem;
+}
+
+.menu {
+  flex-basis: 15%;
+}
+
+.menu > h4 {
+  margin-bottom: 0.5rem;
+}
+
+.window {
+  background-color: azure;
+  padding: 1rem;
+  border-radius: 5px;
+  height: 150px;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.list > li {
+  background-color: lightgray;
+  padding: 0.5rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.list > li:hover {
+  background-color: rgb(196, 196, 196);
+}
+
+.listContainer {
+  background-color: azure;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.count {
+  background-color: lightgray;
+  color: red;
+  border-radius: 15px;
+  padding: 0 0.7rem;
+}
