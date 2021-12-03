@@ -4,12 +4,13 @@ import logo3 from '../../../assets/Сгруппировать 738.svg';
 import logo4 from '../../../assets/Сгруппировать 739.svg';
 import logo5 from '../../../assets/Сгруппировать 540.svg';
 import logo6 from '../../../assets/Сгруппировать 531.svg';
+import styles from './FunctionItem.module.css';
 
 const logos = [logo1, logo2, logo3, logo4, logo5, logo6];
 
 function FunctionItem() {
   return (
-    <div>
+    <div className={styles.logo}>
       {logos.map((logo) => (
         <img src={logo} alt="" />
       ))}
