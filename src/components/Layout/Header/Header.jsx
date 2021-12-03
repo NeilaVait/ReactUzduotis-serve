@@ -1,4 +1,5 @@
 import styles from './Header.module.css';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -8,11 +9,31 @@ function Header() {
           <strong>serve </strong>pro
         </p>
         <menu className={styles.menu}>
-          <li>Funkcijos</li>
-          <li>Ataskaitos</li>
-          <li>Sandėlys</li>
-          <li>Nustatymai</li>
-          <li>Atsijungti</li>
+          <li>
+            <Link to="/funkcijos" style={{ textDecoration: 'none', color: 'white' }}>
+              Funkcijos
+            </Link>
+          </li>
+          <li className={styles.menuItem}>
+            <Link to="/ataskaitos" style={{ textDecoration: 'none', color: 'white' }}>
+              Ataskaitos
+            </Link>
+          </li>
+          <li className={styles.menuItem}>
+            <Link to="/sandelys" style={{ textDecoration: 'none', color: 'white' }}>
+              Sandėlys
+            </Link>
+          </li>
+          <li className={styles.menuItem}>
+            <Link to="/nustatymai" style={{ textDecoration: 'none', color: 'white' }}>
+              Nustatymai
+            </Link>
+          </li>
+          <li className={styles.menuItem}>
+            <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
+              Atsijungti
+            </Link>
+          </li>
         </menu>
       </div>
     </header>
