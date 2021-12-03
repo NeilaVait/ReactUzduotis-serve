@@ -1,6 +1,7 @@
 import styles from './ClientSearch.module.css';
 import SearchTable from './SearchTable/SearchTable';
 import SearchData from './SearchData/SearchData';
+import { useState } from 'react';
 
 function ClientSearch() {
   return (

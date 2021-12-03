@@ -51,6 +51,11 @@ function SearchTable() {
   ];
 
   const [searchValue, setSearchValue] = useState('');
+  const [clientOpen, setClientOpen] = useState(false);
+
+  const handleOpenClient = (name) => {
+    setClientOpen(true);
+  };
 
   return (
     <div className={styles.searchTable}>
@@ -64,35 +69,37 @@ function SearchTable() {
         placeholder="Kliento paieška"
         className={styles.searchBar}
       />
-      <table className={styles.table}>
-        <tr>
+      <div className={styles.table}>
+        <div className={styles.headers}>
           {columns.map((c) => (
-            <th>{c}</th>
+            <div className={styles.header}>{c}</div>
           ))}
-        </tr>
-        {clients
-          .filter((val) => {
-            if (searchValue === '') {
-              return val;
-            }
-            if (val.name.toLowerCase().includes(searchValue.toLowerCase())) {
-              return val;
-            }
-          })
-          .map((c) => (
-            <tr className={styles.client}>
-              <td>{c.name}</td>
-              <td>{c.surname}</td>
-              <td>{c.city}</td>
-              <td>{c.cardNo}</td>
-              <td>{c.id}</td>
-              <td>{c.code}</td>
-              <td>{c.birthYear}</td>
-              <td>{c.phone1}</td>
-              <td>{c.phone2}</td>
-            </tr>
-          ))}
-      </table>
+        </div>
+        <div className={styles.clientContainer}>
+          {clients
+            .filter((val) => {
+              if (searchValue === '') {
+                return val;
+              }
+              if (val.name.toLowerCase().includes(searchValue.toLowerCase())) {
+                return val;
+              }
+            })
+            .map((c) => (
+              <div className={styles.clientRow} onClick={handleOpenClient}>
+                <div className={styles.client}>{c.name}</div>
+                <div className={styles.client}>{c.surname}</div>
+                <div className={styles.client}>{c.city}</div>
+                <div className={styles.client}>{c.cardNo}</div>
+                <div className={styles.client}>{c.id}</div>
+                <div className={styles.client}>{c.code}</div>
+                <div className={styles.client}>{c.birthYear}</div>
+                <div className={styles.client}>{c.phone1}</div>
+                <div className={styles.client}>{c.phone2}</div>
+              </div>
+            ))}
+        </div>
+      </div>
     </div>
   );
 }

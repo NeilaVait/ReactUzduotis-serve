@@ -25,11 +25,6 @@
   cursor: pointer;
 }
 
-.table {
-  width: 95%;
-  margin: 0 auto;
-}
-
 .table > tr > th {
   text-align: left;
 }
@@ -40,4 +35,47 @@
 
 .table > tr > td {
   font-size: 15px;
+  color: white;
+}
+
+.client {
+  cursor: pointer;
+}
+
+.clicked {
+  background-color: blue;
+}
+
+.headers,
+.clientRow {
+  display: flex;
+  text-align: left;
+  line-height: 1rem;
+  padding: 0.2rem 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.header,
+.client {
+  flex-basis: 11%;
+}
+
+.headers {
+  font-weight: bold;
+}
+
+.table {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.clientRow:hover {
+  display: flex;
+  text-align: left;
+  line-height: 1rem;
+  background-color: rgb(0, 0, 100);
+  border-radius: 13px;
+  color: snow;
+  padding: 0.2rem 1rem;
+  margin-bottom: 0.2rem;
 }
