@@ -25,15 +25,14 @@
   flex-direction: row;
   align-items: center;
   gap: 2rem;
+  font-size: 1.2rem;
 }
 
-.menu > li {
-  cursor: pointer;
-  font-size: 1.2rem;
+.menuItem {
   position: relative;
 }
 
-.menu > li:after {
+.menuItem::after {
   position: absolute;
   content: '';
   width: 100%;
@@ -46,6 +45,6 @@
   transform-origin: left;
 }
 
-.menu > li:hover::after {
+.menuItem:hover::after {
   transform: scaleX(1);
 }
