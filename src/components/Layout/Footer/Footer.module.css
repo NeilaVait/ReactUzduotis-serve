@@ -1,3 +1,5 @@
+@import '../../../App.css';
+
 .footer {
   width: 100%;
   display: flex;
@@ -10,7 +12,7 @@
 
 .logo {
   height: 100%;
-  color: rgb(30, 30, 85);
+  color: var(--color-darkblue);
   font-size: 3rem;
   flex-basis: 15%;
 }
@@ -25,13 +27,13 @@
 .list {
   display: flex;
   gap: 1rem;
-  color: rgb(30, 30, 85);
+  color: var(--color-darkblue);
   font-weight: bold;
   list-style-type: none;
 }
 
 .list > li:not(:last-child) {
-  border-right: 2px solid rgb(30, 30, 85);
+  border-right: 2px solid var(--color-darkblue);
 }
 
 .list > li {
@@ -42,7 +44,7 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
-  color: rgb(30, 30, 85);
+  color: var(--color-darkblue);
 }
 
 .line {

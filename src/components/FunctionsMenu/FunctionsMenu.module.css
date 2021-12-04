@@ -1,6 +1,8 @@
+@import '../../App.css';
+
 .menu {
   height: 70px;
-  background-color: rgb(240, 240, 240);
+  background-color: var(--color-lightgray);
   text-align: right;
   padding: 0.3rem 1rem;
   flex-basis: 100%;

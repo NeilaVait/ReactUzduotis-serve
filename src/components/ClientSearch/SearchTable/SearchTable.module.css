@@ -1,5 +1,7 @@
+@import '../../../App.css';
+
 .searchTable {
-  background-color: lightgray;
+  background-color: var(--color-lightgray);
   padding: 1rem;
   position: relative;
 }
@@ -18,7 +20,7 @@
   border: none;
   width: 80px;
   background-color: darkblue;
-  color: azure;
+  color: var(--color-lightgray);
   position: absolute;
   top: 24px;
   right: 30px;
@@ -35,7 +37,7 @@
 
 .table > tr > td {
   font-size: 15px;
-  color: white;
+  color: var(--color-white);
 }
 
 .client {
@@ -43,7 +45,7 @@
 }
 
 .clicked {
-  background-color: blue;
+  background-color: var(--color-darkblue);
 }
 
 .headers,
@@ -73,9 +75,9 @@
   display: flex;
   text-align: left;
   line-height: 1rem;
-  background-color: rgb(0, 0, 100);
+  background-color: var(--color-darkblue);
   border-radius: 13px;
-  color: snow;
+  color: var(--color-white);
   padding: 0.2rem 1rem;
   margin-bottom: 0.2rem;
 }

@@ -14,3 +14,12 @@ main {
 .asideFlex {
   display: flex;
 }
+
+/* variables */
+
+:root {
+  --color-darkblue: rgb(15, 3, 83);
+  --color-lightgray: rgb(243, 243, 243);
+  --color-darkgray: rgb(218, 218, 218);
+  --color-white: rgb(245, 245, 245);
+}

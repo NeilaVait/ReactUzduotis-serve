@@ -1,3 +1,5 @@
+@import '../../App.css';
+
 .list {
   list-style-type: none;
   padding: 0;
@@ -10,7 +12,7 @@
 }
 
 .list > li:hover {
-  background-color: lightgray;
+  background-color: var(--color-lightgray);
   cursor: pointer;
 }
 
