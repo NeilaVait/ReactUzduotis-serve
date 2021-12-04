@@ -1,7 +1,11 @@
 import styles from './SearchTable.module.css';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { ClientContext } from '../../contexts/ClientContext';
 
 function SearchTable() {
+  const context = useContext(ClientContext);
+  console.log('ClientContext', context);
+
   const columns = [
     'Vardas',
     'Pavardė',
@@ -51,15 +55,16 @@ function SearchTable() {
   ];
 
   const [searchValue, setSearchValue] = useState('');
-  const [clientOpen, setClientOpen] = useState(false);
 
-  const handleOpenClient = (name) => {
-    setClientOpen(true);
+  const clearInput = () => {
+    setSearchValue('');
   };
 
   return (
     <div className={styles.searchTable}>
-      <button className={styles.clean}>Valyti</button>
+      <button onClick={clearInput} className={styles.clean}>
+        Valyti
+      </button>
       <input
         value={searchValue}
         onChange={(e) => {
@@ -86,7 +91,7 @@ function SearchTable() {
               }
             })
             .map((c) => (
-              <div className={styles.clientRow} onClick={handleOpenClient}>
+              <div className={styles.clientRow} onClick={context.handleOpenClient}>
                 <div className={styles.client}>{c.name}</div>
                 <div className={styles.client}>{c.surname}</div>
                 <div className={styles.client}>{c.city}</div>
