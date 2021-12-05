@@ -1,9 +1,12 @@
 @import '../../App.css';
 
 .menu {
+  display: flex;
+  justify-content: flex-end;
   height: 70px;
   background-color: var(--color-lightgray);
   text-align: right;
   padding: 0.3rem 1rem;
   flex-basis: 100%;
+  border-bottom: 2px solid var(--color-darkgray);
 }

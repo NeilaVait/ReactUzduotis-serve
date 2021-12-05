@@ -9,23 +9,23 @@ function Header() {
           <strong>serve </strong>pro
         </p>
         <menu className={styles.menu}>
-          <li>
+          <li className={styles.menuItem}>
             <Link to="/funkcijos" style={{ textDecoration: 'none', color: 'white' }}>
               Funkcijos
             </Link>
           </li>
           <li className={styles.menuItem}>
-            <Link to="/ataskaitos" style={{ textDecoration: 'none', color: 'white' }}>
+            <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
               Ataskaitos
             </Link>
           </li>
           <li className={styles.menuItem}>
-            <Link to="/sandelys" style={{ textDecoration: 'none', color: 'white' }}>
+            <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
               Sandėlys
             </Link>
           </li>
           <li className={styles.menuItem}>
-            <Link to="/nustatymai" style={{ textDecoration: 'none', color: 'white' }}>
+            <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
               Nustatymai
             </Link>
           </li>

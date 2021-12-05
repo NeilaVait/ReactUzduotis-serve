@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-darkblue);
 }
 
 .container {
@@ -15,11 +22,20 @@ main {
   display: flex;
 }
 
+.scrollhost {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollhost::-webkit-scrollbar {
+  display: none;
+}
+
 /* variables */
 
 :root {
   --color-darkblue: rgb(15, 3, 83);
   --color-lightgray: rgb(243, 243, 243);
   --color-darkgray: rgb(218, 218, 218);
-  --color-white: rgb(245, 245, 245);
+  --color-white: rgb(255, 255, 255);
 }

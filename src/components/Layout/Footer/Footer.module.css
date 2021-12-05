@@ -1,6 +1,7 @@
 @import '../../../App.css';
 
 .footer {
+  padding-top: 1rem;
   width: 100%;
   display: flex;
   height: 80px;
@@ -14,11 +15,11 @@
   height: 100%;
   color: var(--color-darkblue);
   font-size: 3rem;
-  flex-basis: 15%;
+  flex-basis: 17%;
 }
 
 .flex {
-  flex-basis: 85%;
+  flex-basis: 83%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,6 +31,7 @@
   color: var(--color-darkblue);
   font-weight: bold;
   list-style-type: none;
+  padding: 0;
 }
 
 .list > li:not(:last-child) {

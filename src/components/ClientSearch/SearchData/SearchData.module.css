@@ -32,10 +32,18 @@
 }
 
 .window {
-  background-color: var(--color-lightgray);
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-white);
   padding: 1rem;
   border-radius: 5px;
-  height: 150px;
+  height: 160px;
+}
+
+.infoIcons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .list {
@@ -58,13 +66,13 @@
 }
 
 .listContainer {
-  background-color: var(--color-lightgray);
+  background-color: white;
   padding: 0.5rem;
   border-radius: 5px;
 }
 
 .count {
-  background-color: var(--color-lightgray);
+  background-color: var(--color-darkgray);
   color: red;
   border-radius: 15px;
   padding: 0 0.7rem;
