@@ -1,19 +1,10 @@
-import logo1 from '../../../assets/Сгруппировать 568.svg';
-import logo2 from '../../../assets/Сгруппировать 569.svg';
-import logo3 from '../../../assets/Сгруппировать 738.svg';
-import logo4 from '../../../assets/Сгруппировать 739.svg';
-import logo5 from '../../../assets/Сгруппировать 540.svg';
-import logo6 from '../../../assets/Сгруппировать 531.svg';
 import styles from './FunctionItem.module.css';
+import infoIcon from '../../../assets/Info.svg';
 
-const logos = [logo1, logo2, logo3, logo4, logo5, logo6];
-
-function FunctionItem() {
+function FunctionItem({ logo, info }) {
   return (
     <div className={styles.logo}>
-      {logos.map((logo) => (
-        <img src={logo} alt="" />
-      ))}
+      <img src={info ? infoIcon : logo} alt="" />
     </div>
   );
 }
