@@ -1,4 +1,5 @@
 import styles from './Footer.module.css';
+import worldIcon from '../../../assets/Gaublys.svg';
 
 function Footer() {
   return (
@@ -19,7 +20,10 @@ function Footer() {
               <a href="">Pagalba ir kontaktai</a>
             </li>
           </ul>
-          <button className={styles.lang}>Lietuvių</button>
+          <button className={styles.lang}>
+            <img className={worldIcon} src={worldIcon} alt="" />
+            <span>Lietuvių</span>
+          </button>
         </div>
       </footer>
     </div>
