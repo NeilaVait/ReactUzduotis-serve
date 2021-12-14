@@ -6,20 +6,28 @@ import HomePage from './pages/HomePage';
 import ClientContextProvider from './components/contexts/ClientContext';
 
 function App() {
+  const renderThumb = ({ style, ...props }) => {
+    const thumbStyle = {
+      borderRadius: 6,
+      backgroundColor: 'rgba(25, 16, 107, 0.8)',
+    };
+    return <div style={{ ...style, ...thumbStyle }} {...props} />;
+  };
+
+  const CustomScrollbars = (props) => <Scrollbars renderThumbVertical={renderThumb} {...props} />;
+
   return (
     <div className="App">
-      <Scrollbars style={{ height: 700 }}>
-        <div className="scrollhost">
-          <ClientContextProvider>
-            <Router>
-              <Routes>
-                <Route path="/funkcijos" element={<FunctionsPage />} />
-                <Route path="/" element={<HomePage />} />
-              </Routes>
-            </Router>
-          </ClientContextProvider>
-        </div>
-      </Scrollbars>
+      <CustomScrollbars style={{ height: '100vh' }}>
+        <ClientContextProvider>
+          <Router>
+            <Routes>
+              <Route path="/funkcijos" element={<FunctionsPage />} />
+              <Route path="/" element={<HomePage />} />
+            </Routes>
+          </Router>
+        </ClientContextProvider>
+      </CustomScrollbars>
     </div>
   );
 }
