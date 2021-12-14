@@ -94,7 +94,6 @@ function SearchTable() {
               if (val.name.toLowerCase().includes(searchValue.toLowerCase())) {
                 return val;
               }
-              return val;
             })
             .map((c) => (
               <div className={styles.clientRow} onClick={context.handleOpenClient}>
