@@ -7,24 +7,32 @@
 }
 
 .searchBar {
-  border-radius: 15px;
+  border-radius: 27px;
   border: none;
-  padding: 0.5rem;
+  padding: 0.7rem 0.5rem 0.7rem 3rem;
   width: 100%;
-  line-height: 1.2rem;
+  line-height: 1.4rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
+  color: var(--color-lightgray);
+}
+
+.searchIcon {
+  position: absolute;
+  top: 25px;
+  left: 30px;
 }
 
 .clean {
   border-radius: 15px;
   border: none;
-  width: 80px;
   background-color: darkblue;
   color: var(--color-lightgray);
   position: absolute;
-  top: 24px;
+  top: 26px;
   right: 30px;
   cursor: pointer;
+  padding: 5px 15px;
 }
 
 .table > tr > th {
@@ -80,4 +88,10 @@
   color: var(--color-white);
   padding: 0.2rem 1rem;
   margin-bottom: 0.2rem;
+}
+
+.clean > img {
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
 }

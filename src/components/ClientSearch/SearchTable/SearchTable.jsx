@@ -1,6 +1,8 @@
 import styles from './SearchTable.module.css';
 import { useContext, useState } from 'react';
 import { ClientContext } from '../../contexts/ClientContext';
+import clearIcon from '../../../assets/Контур 124.svg';
+import searchIcon from '../../../assets/Контур 119.svg';
 
 function SearchTable() {
   const context = useContext(ClientContext);
@@ -63,8 +65,10 @@ function SearchTable() {
   return (
     <div className={styles.searchTable}>
       <button onClick={clearInput} className={styles.clean}>
+        <img src={clearIcon} alt="" />
         Valyti
       </button>
+      <img src={searchIcon} alt="" className={styles.searchIcon} />
       <input
         value={searchValue}
         onChange={(e) => {
@@ -74,6 +78,7 @@ function SearchTable() {
         placeholder="Kliento paieška"
         className={styles.searchBar}
       />
+
       <div className={styles.table}>
         <div className={styles.headers}>
           {columns.map((c) => (
@@ -89,6 +94,7 @@ function SearchTable() {
               if (val.name.toLowerCase().includes(searchValue.toLowerCase())) {
                 return val;
               }
+              return val;
             })
             .map((c) => (
               <div className={styles.clientRow} onClick={context.handleOpenClient}>
