@@ -9,7 +9,7 @@ function Aside() {
   const renderThumb = ({ style, ...props }) => {
     const thumbStyle = {
       borderRadius: 6,
-      backgroundColor: 'rgba(25, 16, 107, 0.8)',
+      backgroundColor: 'rgb(15, 3, 83)',
     };
     return <div style={{ ...style, ...thumbStyle }} {...props} />;
   };
@@ -18,7 +18,7 @@ function Aside() {
 
   return (
     <aside className={styles.aside}>
-      <CustomScrollbars style={{ height: '100vh' }}>
+      <CustomScrollbars>
         <MenuList dayFunctions={dayFunctions} />
         <div className={styles.line}></div>
         <MenuList cards={cards} />

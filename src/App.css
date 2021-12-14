@@ -22,10 +22,6 @@ main {
   display: flex;
 }
 
-.App {
-  overflow-x: hidden;
-}
-
 /* variables */
 
 :root {

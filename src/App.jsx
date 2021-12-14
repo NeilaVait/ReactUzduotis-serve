@@ -9,7 +9,7 @@ function App() {
   const renderThumb = ({ style, ...props }) => {
     const thumbStyle = {
       borderRadius: 6,
-      backgroundColor: 'rgba(25, 16, 107, 0.8)',
+      backgroundColor: 'rgb(15, 3, 83)',
     };
     return <div style={{ ...style, ...thumbStyle }} {...props} />;
   };
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <CustomScrollbars style={{ height: '100vh' }}>
+      <CustomScrollbars style={{ height: 700 }}>
         <ClientContextProvider>
           <Router>
             <Routes>
