@@ -20,41 +20,41 @@ function SearchTable() {
     'Telefono Nr.2',
   ];
 
-  const clients = [
-    {
-      name: 'Vardenis',
-      surname: 'Pavardenis',
-      city: 'Kaunas',
-      cardNo: '21 V0001',
-      id: '00000',
-      code: '00000',
-      birthYear: '1974',
-      phone1: '+370 000 00000',
-      phone2: '+370 000 00000',
-    },
-    {
-      name: 'Bardenis',
-      surname: 'Pavardenis',
-      city: 'Kaunas',
-      cardNo: '21 V0001',
-      id: '00000',
-      code: '00000',
-      birthYear: '1974',
-      phone1: '+370 000 00000',
-      phone2: '+370 000 00000',
-    },
-    {
-      name: 'Vardenis',
-      surname: 'Pavardenis',
-      city: 'Kaunas',
-      cardNo: '21 V0001',
-      id: '00000',
-      code: '00000',
-      birthYear: '1974',
-      phone1: '+370 000 00000',
-      phone2: '+370 000 00000',
-    },
-  ];
+  // const clients = [
+  //   {
+  //     name: 'Vardenis',
+  //     surname: 'Pavardenis',
+  //     city: 'Kaunas',
+  //     cardNo: '21 V0001',
+  //     id: '00000',
+  //     code: '00000',
+  //     birthYear: '1974',
+  //     phone1: '+370 000 00000',
+  //     phone2: '+370 000 00000',
+  //   },
+  //   {
+  //     name: 'Bardenis',
+  //     surname: 'Pavardenis',
+  //     city: 'Kaunas',
+  //     cardNo: '21 V0001',
+  //     id: '00000',
+  //     code: '00000',
+  //     birthYear: '1974',
+  //     phone1: '+370 000 00000',
+  //     phone2: '+370 000 00000',
+  //   },
+  //   {
+  //     name: 'Vardenis',
+  //     surname: 'Pavardenis',
+  //     city: 'Kaunas',
+  //     cardNo: '21 V0001',
+  //     id: '00000',
+  //     code: '00000',
+  //     birthYear: '1974',
+  //     phone1: '+370 000 00000',
+  //     phone2: '+370 000 00000',
+  //   },
+  // ];
 
   const [searchValue, setSearchValue] = useState('');
 
@@ -86,7 +86,7 @@ function SearchTable() {
           ))}
         </div>
         <div className={styles.clientContainer}>
-          {clients
+          {context.clients
             .filter((val) => {
               if (searchValue === '') {
                 return val;
@@ -96,7 +96,7 @@ function SearchTable() {
               }
             })
             .map((c) => (
-              <div className={styles.clientRow} onClick={context.handleOpenClient}>
+              <div className={styles.clientRow} onClick={() => context.handleOpenClient(c.name)}>
                 <div className={styles.client}>{c.name}</div>
                 <div className={styles.client}>{c.surname}</div>
                 <div className={styles.client}>{c.city}</div>

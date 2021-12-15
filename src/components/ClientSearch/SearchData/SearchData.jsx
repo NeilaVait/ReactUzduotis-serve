@@ -19,11 +19,13 @@ function SearchData() {
     'SMS nustatymai',
   ];
 
-  return (
-    <div className={styles.container}>
-      {context.clientOpen && (
+  const clientDataConditional = () => {
+    if (context.openClient.length === 1) {
+      return (
         <div className={styles.clientData}>
-          <h2>Vardenis Pavardenis</h2>
+          <h2>
+            {context.openClient[0].name} {context.openClient[0].surname}
+          </h2>
           <div className={styles.flex}>
             <div className={styles.info}>
               <h4>Svarbi informacija</h4>
@@ -50,9 +52,13 @@ function SearchData() {
             </div>
           </div>
         </div>
-      )}
-    </div>
-  );
+      );
+    } else {
+      return null;
+    }
+  };
+
+  return <div className={styles.container}>{clientDataConditional()}</div>;
 }
 
 export default SearchData;
