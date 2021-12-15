@@ -18,7 +18,7 @@ function Aside() {
 
   return (
     <aside className={styles.aside}>
-      <CustomScrollbars>
+      <CustomScrollbars style={{ widh: '100%', height: '100%' }}>
         <MenuList dayFunctions={dayFunctions} />
         <div className={styles.line}></div>
         <MenuList cards={cards} />

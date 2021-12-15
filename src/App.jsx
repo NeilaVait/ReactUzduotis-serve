@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <CustomScrollbars style={{ height: 700 }}>
+      <CustomScrollbars style={{ height: '100vh' }}>
         <ClientContextProvider>
           <Router>
             <Routes>
